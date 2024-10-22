@@ -10,6 +10,12 @@ def simple_mul(a: torch.Tensor, b: torch.Tensor) -> torch.Tensor:
 
 simple_mul_fx = torch.fx.symbolic_trace(simple_mul)
 print(simple_mul_fx.graph)
+print(simple_mul_fx.code)
+
+
+class MyModule(torch.nn.Module):
+    def forward(self, a: torch.Tensor, b: torch.Tensor) -> torch.Tensor:
+        return simple_mul(a, b)
 
 
 def transform(
@@ -18,11 +24,11 @@ def transform(
     graph = tracer_class().trace(m)
     for node in graph.nodes:
         if node.op == "call_function":
-            print(node.target)
             if node.target == torch.add:
-                node.target = torch.neg_
+                node.target = torch.mul
     graph.lint()
-    return graph
+    return torch.fx.GraphModule(m, graph)
 
 
-print(transform(simple_mul))
+mm = MyModule()
+print(torch.fx.symbolic_trace(transform(mm)).code)
