@@ -1,8 +1,11 @@
+import dis
 from typing import List
 
 import torch
+import torch._dynamo as torchdynamo
+import torch._dynamo.config
 import torch.fx
-from torch import _dynamo as torchdynamo
+from depyf import decompile
 
 
 def my_compiler(gm: torch.fx.GraphModule, example_inputs: List[torch.Tensor]):
@@ -12,7 +15,8 @@ def my_compiler(gm: torch.fx.GraphModule, example_inputs: List[torch.Tensor]):
     return gm.forward  # return a python callable
 
 
-@torchdynamo.optimize(my_compiler)
+# @torchdynamo.optimize(my_compiler)
+@torch.compile(backend=my_compiler)
 def toy_example(a, b):
     x = a / (torch.abs(a) + 1)
     if b.sum() < 0:
@@ -31,14 +35,11 @@ cache_entries = _debug_get_cache_entry_list(innermost_fn(toy_example))
 cache_entry = cache_entries[0]
 guard, code = cache_entry.check_fn, cache_entry.code
 # the guard takes the local variables of an input frame, and tells whether a re-compilation should be triggered.
-import dis
 
 dis.dis(guard)
 dis.dis(code)
 
 for code_part in guard.code_parts:
     print(code_part)
-
-from depyf import decompile
 
 print(decompile(code))
