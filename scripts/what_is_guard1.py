@@ -1,6 +1,7 @@
 from typing import List
 
 import torch
+import torch.fx
 from torch import _dynamo as torchdynamo
 
 
@@ -19,7 +20,7 @@ def toy_example(a, b):
     return x * b
 
 
-for _ in range(100):
+for _ in range(1):
     a = torch.randn(10)
     b = torch.randn(10)
     toy_example(a, b)
