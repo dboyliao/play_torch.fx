@@ -1,0 +1,12 @@
+{
+    "C_Cpp.default.compilerPath": "/usr/bin/clang",
+    "files.associations": {
+        "*.vue": "vue",
+        ".bash_functions": "shellscript",
+        "Makefile-docker": "makefile",
+        "python.h": "c",
+        "pycore_ceval.h": "c",
+        "frameobject.h": "c",
+        "pystate.h": "c"
+    }
+}
