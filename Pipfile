@@ -10,10 +10,14 @@ torch-vision = "*"
 tabulate = "*"
 depyf = "*"
 ipython = "*"
+transformers = "*"
+pillow = "*"
+requests = "*"
 
 [dev-packages]
 black = "*"
 isort = "*"
+ipykernel = "*"
 
 [requires]
 python_version = "3.11"

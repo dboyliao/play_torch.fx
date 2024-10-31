@@ -12,3 +12,4 @@
 - https://jysh1214.github.io/pytorch/2024/10/19/Graph-Break-in-TorchDynamo.html
 - PyTorch Custom Backends: https://pytorch.org/docs/stable/torch.compiler_custom_backends.html#overview
 - What is Continuation: https://www.youtube.com/watch?v=zB5LTkaJaqk&ab_channel=EricNormand
+- `set_eval_frame` in TorchDynamo: https://dev-discuss.pytorch.org/t/a-minimal-working-example-of-standalone-usage-for-dynamo-eval-frame/1525
