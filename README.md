@@ -1,5 +1,6 @@
 # References
 - https://peps.python.org/pep-0523/
+    - https://github.com/python/cpython/issues/80067
 - https://github.com/pytorch/examples/tree/cdef4d43fb1a2c6c4349daa5080e4e8731c34569/fx
 - https://pytorch.org/docs/stable/torch.compiler_dynamo_overview.html
 - https://www.youtube.com/watch?v=5FNHwPIyHr8
