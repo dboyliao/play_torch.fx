@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "Mac",
+            "name": "Linux",
             "includePath": [
                 "${default}",
                 "${env:HOME}/.pyenv/sources/3.11.10-debug/Python-3.11.10/Include"
@@ -13,6 +13,17 @@
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "macos-clang-x64"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "${default}",
+                "${env:HOME}/.pyenv/sources/3.11.10-debug/Python-3.11.10/Include"
+            ],
+            "defines": [],
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-clang-x64"
         }
     ],
     "version": 4
