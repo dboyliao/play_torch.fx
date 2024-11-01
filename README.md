@@ -1,3 +1,11 @@
+# Build
+```bash
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+```
+
 # References
 - https://peps.python.org/pep-0523/
     - https://github.com/python/cpython/issues/80067

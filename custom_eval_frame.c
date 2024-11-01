@@ -1,5 +1,4 @@
 #include <Python.h>
-#include <cpython/pystate.h>
 #include <stdio.h>
 
 #include "frameobject.h"
@@ -23,7 +22,7 @@ static PyObject *set_eval_frame(PyObject *dummy, PyObject *args) {
   }
   PyThread_tss_set(&_callback_key, callback);
   PyThreadState *tstate = PyThreadState_GET();
-  _PyInterpreterState_SetEvalFrameFunc(tstate->interp, &_custom_eval_frame);
+  // _PyInterpreterState_SetEvalFrameFunc(tstate->interp, &_custom_eval_frame);
   Py_RETURN_NONE;
 }
 
