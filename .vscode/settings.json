@@ -7,6 +7,8 @@
         "python.h": "c",
         "pycore_ceval.h": "c",
         "frameobject.h": "c",
-        "pystate.h": "c"
+        "pystate.h": "c",
+        "stdio.h": "c",
+        "pycore_interp.h": "c"
     }
 }
