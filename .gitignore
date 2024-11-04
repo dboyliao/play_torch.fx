@@ -1,3 +1,6 @@
 *.log
 *.so
 .vscode/.vscode-cpptools
+build
+.ipynb_checkpoints
+
