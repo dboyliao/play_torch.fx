@@ -7574,17 +7574,17 @@ main {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>CPU times: user 7 μs, sys: 1 μs, total: 8 μs
-Wall time: 14.5 μs
+<pre>CPU times: user 6 μs, sys: 1e+03 ns, total: 7 μs
+Wall time: 13.8 μs
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>tensor([[ 2.1325, -1.3003,  0.0151, -1.1431],
-        [-0.7481, -0.5271, -0.2793,  0.3850],
-        [-0.2697,  0.3593, -2.1774,  0.4619]])</pre>
+<pre>tensor([[-0.1931, -1.4144,  2.1695,  0.5346],
+        [ 1.0813, -0.5102,  1.3452, -2.1360],
+        [-0.1093, -0.9701,  2.5846,  0.0914]])</pre>
 </div>
 </div>
 </div>
@@ -7612,16 +7612,16 @@ Wall time: 14.5 μs
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>CPU times: user 6 μs, sys: 1 μs, total: 7 μs
-Wall time: 14.1 μs
+Wall time: 13.4 μs
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>tensor([[ 2.1325, -1.3003,  0.0151, -1.1431],
-        [-0.7481, -0.5271, -0.2793,  0.3850],
-        [-0.2697,  0.3593, -2.1774,  0.4619]])</pre>
+<pre>tensor([[-0.1931, -1.4144,  2.1695,  0.5346],
+        [ 1.0813, -0.5102,  1.3452, -2.1360],
+        [-0.1093, -0.9701,  2.5846,  0.0914]])</pre>
 </div>
 </div>
 </div>
@@ -7648,17 +7648,17 @@ Wall time: 14.1 μs
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>CPU times: user 7 μs, sys: 1 μs, total: 8 μs
-Wall time: 15.5 μs
+<pre>CPU times: user 7 μs, sys: 0 ns, total: 7 μs
+Wall time: 15.3 μs
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>tensor([[ 2.1325, -1.3003,  0.0151, -1.1431],
-        [-0.7481, -0.5271, -0.2793,  0.3850],
-        [-0.2697,  0.3593, -2.1774,  0.4619]])</pre>
+<pre>tensor([[-0.1931, -1.4144,  2.1695,  0.5346],
+        [ 1.0813, -0.5102,  1.3452, -2.1360],
+        [-0.1093, -0.9701,  2.5846,  0.0914]])</pre>
 </div>
 </div>
 </div>
@@ -7888,6 +7888,947 @@ if __name__ == "__main__":
 
 </pre>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=20baab0d-4e41-4c2b-b518-914cf7e02dbb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>You can learn more about <code>ATen</code> with following links:</p>
+<ul>
+<li><a href="https://pytorch.org/cppdocs/">https://pytorch.org/cppdocs/</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0c4130ee-7b73-41ff-806f-8ea999ce6fcb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Speedup-Your-Module-with-TorchDynamo">Speedup Your Module with <code>TorchDynamo</code><a class="anchor-link" href="#Speedup-Your-Module-with-TorchDynamo">¶</a></h2>
+</div>
+</div>
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f5e8dde6-bac3-4576-ae99-b3de5f1f4fc4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># https://huggingface.co/google/vit-base-patch16-224-in21k</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">'http://images.cocodataset.org/val2017/000000039769.jpg'</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">raw</span><span class="p">)</span>
+
+<span class="n">processor</span> <span class="o">=</span> <span class="n">ViTImageProcessor</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">'google/vit-base-patch16-224-in21k'</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">ViTModel</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">'google/vit-base-patch16-224-in21k'</span><span class="p">)</span>
+
+<span class="n">inputs</span> <span class="o">=</span> <span class="n">processor</span><span class="p">(</span><span class="n">images</span><span class="o">=</span><span class="p">[</span><span class="n">image</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)],</span> <span class="n">return_tensors</span><span class="o">=</span><span class="s2">"pt"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=70ae98b9-c431-4647-9546-b3a474546156">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="mi">0</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s2">"cpu"</span><span class="p">)</span> 
+<span class="n">device</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>device(type='cuda', index=0)</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e586c53a-c583-4ca8-99a5-cab309e34900">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+<span class="n">inputs</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">inputs</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=722b4111-b79f-40ea-9481-2dd0200ba750">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">time</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="o">**</span><span class="n">inputs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>CPU times: user 9 μs, sys: 1e+03 ns, total: 10 μs
+Wall time: 18.4 μs
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5608300d-8aa0-4e74-b351-ed3dda45f346">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">model_</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7884a11a-38f1-4445-9658-a6b658efc13e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># trigger JIT-compilation</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">model_</span><span class="p">(</span><span class="o">**</span><span class="n">inputs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b05b419c-3e5e-4482-abd5-7716415d0efc">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">time</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">model_</span><span class="p">(</span><span class="o">**</span><span class="n">inputs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>CPU times: user 7 μs, sys: 0 ns, total: 7 μs
+Wall time: 14.3 μs
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=32a940dc-6f47-4680-92f3-7e6c5ed96988">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Custom-Backend/Compiler-Support">Custom Backend/Compiler Support<a class="anchor-link" href="#Custom-Backend/Compiler-Support">¶</a></h2>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=932c02d7-0906-4f2a-807a-162b8cd916c3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li><code>torch.compile</code> allows you to modify/rewrite your module with custom backend function.<ul>
+<li>Build on top of <code>fx.Graph</code>, which is the graph IR for PyTorch.</li>
+<li><strong>Custom optimization on the model is possible</strong></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8e87f278-0a6d-4496-ba62-95644d937de3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">MyModule</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_linear</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dropout</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">):</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_linear</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dropout</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">out</span>
+
+<span class="n">my_model</span> <span class="o">=</span> <span class="n">MyModule</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=11c5f708-f112-4573-aecd-04bff95742ac">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ori_graph</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">fx</span><span class="o">.</span><span class="n">symbolic_trace</span><span class="p">(</span><span class="n">my_model</span><span class="p">)</span><span class="o">.</span><span class="n">graph</span>
+<span class="n">ori_graph</span><span class="o">.</span><span class="n">print_tabular</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>opcode       name      target    args         kwargs
+-----------  --------  --------  -----------  --------
+placeholder  x         x         ()           {}
+call_module  _linear   _linear   (x,)         {}
+call_module  _dropout  _dropout  (_linear,)   {}
+output       output    output    (_dropout,)  {}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=01a67fb4-975f-4d29-9fe3-7a01dd696499">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">new_graph</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="k">def</span> <span class="nf">my_backend</span><span class="p">(</span><span class="n">gm</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">fx</span><span class="o">.</span><span class="n">GraphModule</span><span class="p">,</span> <span class="n">sample_inputs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">]):</span>
+    <span class="k">global</span> <span class="n">new_graph</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">gm</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">nodes</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">target</span> <span class="o">==</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">dropout</span><span class="p">:</span>
+            <span class="n">node</span><span class="o">.</span><span class="n">replace_all_uses_with</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">gm</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">erase_node</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+    <span class="n">gm</span><span class="o">.</span><span class="n">recompile</span><span class="p">()</span>
+    <span class="n">new_graph</span> <span class="o">=</span> <span class="n">gm</span><span class="o">.</span><span class="n">graph</span>
+    <span class="k">return</span> <span class="n">gm</span><span class="o">.</span><span class="n">forward</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b654d2cf-266f-43b7-b87e-1ebf57b81898">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">my_model_</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">my_model</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="n">my_backend</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a37d2f07-8dac-444d-b0c9-0d3faec9b1a1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f94eb130-e8bc-4a12-80a0-db934311b73b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">my_model_</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>tensor([[-0.0533, -0.6154,  0.0078],
+        [ 0.5948,  0.2216, -0.3222],
+        [-0.4676, -0.2946, -1.0253],
+        [-0.2791, -0.5381,  0.0247],
+        [ 0.4472,  0.0657, -1.3394],
+        [ 0.2567, -0.7131, -1.3041],
+        [ 0.1124,  0.4636, -0.1534],
+        [-0.9166,  0.7008, -0.0301],
+        [-0.4780, -0.2450, -0.6456],
+        [ 0.8653, -0.0872,  0.5471]], grad_fn=&lt;AddmmBackward0&gt;)</pre>
+</div>
+</div>
+</div>
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=47832859-d2be-4a67-9356-7c66d36f5a29">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">new_graph</span><span class="o">.</span><span class="n">print_tabular</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>opcode         name                                      target                                    args                                                                                      kwargs
+-------------  ----------------------------------------  ----------------------------------------  ----------------------------------------------------------------------------------------  --------
+placeholder    l_self_modules_linear_parameters_weight_  L_self_modules_linear_parameters_weight_  ()                                                                                        {}
+placeholder    l_self_modules_linear_parameters_bias_    L_self_modules_linear_parameters_bias_    ()                                                                                        {}
+placeholder    l_x_                                      L_x_                                      ()                                                                                        {}
+call_function  out                                       &lt;built-in function linear&gt;                (l_x_, l_self_modules_linear_parameters_weight_, l_self_modules_linear_parameters_bias_)  {}
+output         output                                    output                                    ((out,),)                                                                                 {}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7d8fe66d-5379-450e-88bd-ead3f2a1db4a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li>Even pattern match on subgraph is possible!<ul>
+<li><a href="https://github.com/pytorch/examples/blob/main/fx/subgraph_rewriter_basic_use.py">https://github.com/pytorch/examples/blob/main/fx/subgraph_rewriter_basic_use.py</a></li>
+</ul>
+</li>
+</ul>
+<p><img alt="utensor-node-fusion" src="https://github.com/uTensor/utensor_cgen/blob/eccd6859028d0b6a350dced25ea72ff02faaf9ad/doc/source/_images/conv_pool_fuse.png?raw=true"/></p>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=dd953735-26e2-4254-ab75-aba90d5e8d58">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="How:-TorchDynamo-and-PEP-523">How: <code>TorchDynamo</code> and PEP-523<a class="anchor-link" href="#How:-TorchDynamo-and-PEP-523">¶</a></h2>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d4cd4a5c-392e-4f45-b4e9-6f82c5f902e1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li>PEP-523: <a href="https://peps.python.org/pep-0523/">https://peps.python.org/pep-0523/</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4bb240a2-8652-451c-b41b-cdbe3b5cc1c8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><img alt="pep-523-ceval" src="img/pep-523-ceval.png"/></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5d6b05a5-b043-4d0c-88f7-095a7e3d82d1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Example: <a href="https://github.com/microsoft/pyjion">Pyjion</a></p>
+<p><img alt="pep-523" src="img/pep-523-pyjion.png"/></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2c15d16a-cbd9-4b57-903f-70e2fd751702">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="TorchDynamo-Workflow"><code>TorchDynamo</code> Workflow<a class="anchor-link" href="#TorchDynamo-Workflow">¶</a></h2><p><img alt="torch-workflow" src="img/torchdynamo_workflow.drawio.svg"/></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7abfdd03-f624-4ada-be76-de3a9779436a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="The-Dark-Side:-set_eval_frame">The Dark Side: <code>set_eval_frame</code><a class="anchor-link" href="#The-Dark-Side:-set_eval_frame">¶</a></h3><img alt="dark-side" src="img/dark-side.jpg" width="300"/>
+<p><a href="https://starwars.fandom.com/wiki/Dark_side_of_the_Force/Legends">credit</a></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d0c22ea3-5681-4e3a-8c0e-f9341b67fb0f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="torch.compile---%3E-torch._dynamo.optimize"><code>torch.compile</code> --&gt; <code>torch._dynamo.optimize</code><a class="anchor-link" href="#torch.compile---%3E-torch._dynamo.optimize">¶</a></h2><p><img alt="torch-compile" src="img/torch-compile.png"/></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=12380588-e580-4d9f-aa4e-1f8efd77c64d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div>
+<img alt="torch-compile-optimize" src="img/torch-compile-optimize.png" width="300"/>
+<img alt="torch-compile-optimize-context" src="img/torch-compile-optimize-context.png" width="320"/>
+</div>
+<ul>
+<li><code>torch._dynamo.optimize</code><ul>
+<li>wrapping your <code>backend</code> with <code>convert_frame.convert_frame</code></li>
+<li>Construct a <code>OptimizeContext</code> with wrapped <code>backend</code></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f64a90f4-24c7-4f15-8cce-682d8a1eeebd">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li>Finally, the <code>backend</code> is wrapped into a <code>_TorchDynamoContext</code><ul>
+<li>its <code>__call__</code> is invoked once you run inference on compiled module</li>
+</ul>
+</li>
+</ul>
+<p><img alt="torch-context-set-eval" src="img/torch-context-set-eval.png"/></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b2b6653b-c6dc-49ec-9aa6-35aee1c497cf">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>The source code of the C implementation of <code>set_eval_frame</code> can be found <a href="https://github.com/pytorch/pytorch/blob/v2.5.0/torch/csrc/dynamo/eval_frame.c#L758-L782">here</a>.</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ab3672e5-7b23-48f5-ac0c-20a0cc3c8098">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="The-Final-Secret:-ConvertFrameAssert">The Final Secret: <code>ConvertFrameAssert</code><a class="anchor-link" href="#The-Final-Secret:-ConvertFrameAssert">¶</a></h2><p><img alt="torch-convert-frame-call" src="img/torch-convert-frame-call.png"/></p>
+<p><a href="https://github.com/pytorch/pytorch/blob/v2.5.0/torch/_dynamo/convert_frame.py#L434-L542">impl</a></p>
+</div>
+</div>
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2c69d921-db6d-4854-8b2d-aa375c69a008">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Let's try it!</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+<span class="kn">from</span> <span class="nn">torch._dynamo.types</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">CacheEntry</span><span class="p">,</span>
+    <span class="n">DynamoFrameType</span><span class="p">,</span>
+    <span class="n">FrameState</span><span class="p">,</span>
+    <span class="n">GuardedCode</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">torch._guards</span> <span class="kn">import</span> <span class="n">CompileId</span>
+
+<span class="n">hit</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">callback</span><span class="p">(</span>
+    <span class="n">frame</span><span class="p">:</span> <span class="n">DynamoFrameType</span><span class="p">,</span>
+    <span class="n">cache</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">CacheEntry</span><span class="p">],</span>
+    <span class="n">frame_state</span><span class="p">:</span> <span class="n">FrameState</span>
+<span class="p">):</span>
+    <span class="k">global</span> <span class="n">hit</span><span class="p">,</span> <span class="n">frame_id</span>
+    <span class="n">hit</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">function_name</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">f_code</span><span class="o">.</span><span class="n">co_name</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"calling </span><span class="si">{</span><span class="n">function_name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">GuardedCode</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="n">frame</span><span class="o">.</span><span class="n">f_code</span><span class="p">,</span> <span class="n">check_fn</span><span class="o">=</span><span class="k">lambda</span> <span class="n">local</span><span class="p">:</span> <span class="n">hit</span><span class="p">,</span> <span class="n">compile_id</span><span class="o">=</span><span class="n">CompileId</span><span class="p">(</span><span class="n">frame_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">frame_compile_id</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=cb200ab3-aa1d-4ec4-a19e-88c3fbee9ffc">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">torch._C._dynamo.eval_frame</span> <span class="kn">import</span> <span class="n">set_eval_frame</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b6fb3281-b907-44fd-873e-95c9bd20a52a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b8bd44e9-8a34-4b19-bb88-f69c80e0fc46">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">prior</span> <span class="o">=</span> <span class="n">set_eval_frame</span><span class="p">(</span><span class="n">callback</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">set_eval_frame</span><span class="p">(</span><span class="n">prior</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>calling __get__
+calling get
+calling cast
+calling helper
+calling __init__
+calling extra_flags
+calling __enter__
+calling showtraceback
+calling _get_exc_info
+calling contains_exceptiongroup
+calling structured_traceback
+calling structured_traceback
+calling structured_traceback
+calling format_exception_as_a_whole
+calling prepare_header
+calling __getattr__
+calling get_terminal_size
+calling get_terminal_size
+calling __getitem__
+calling encode
+calling get_records
+calling has_colors
+calling get_style_by_name
+calling _find_and_load
+calling __init__
+calling __enter__
+calling _get_module_lock
+calling __init__
+calling acquire
+calling _find_and_load_unlocked
+calling _find_spec
+calling __enter__
+calling find_spec
+calling __exit__
+calling find_spec
+calling find_spec
+calling find_spec
+calling _call_with_frames_removed
+calling find_spec
+calling _get_spec
+calling _path_importer_cache
+calling find_spec
+calling _path_stat
+calling _fill_cache
+calling _relax_case
+calling _path_join
+calling &lt;listcomp&gt;
+calling _verbose_message
+calling _path_isfile
+calling _path_is_mode_type
+calling _get_spec
+calling __init__
+calling spec_from_file_location
+calling _path_isabs
+calling __init__
+calling _load_unlocked
+calling module_from_spec
+calling create_module
+calling _new_module
+calling _init_module_attrs
+calling parent
+calling has_location
+calling cached
+calling _get_cached
+calling cache_from_source
+calling _path_split
+calling &lt;genexpr&gt;
+calling __exit__
+calling release
+calling cb
+calling write
+calling parent_header
+calling _is_master_process
+Unexpected exception formatting exception. Falling back to standard exceptioncalling _schedule_flush
+
+calling print_exc
+calling print_exception
+calling _parse_value_tb
+calling __init__
+calling _walk_tb_with_full_positions
+calling _extract_from_extended_frame_gen
+calling _safe_string
+calling _load_lines
+calling print
+calling format
+calling __set__
+calling set
+calling _validate
+calling validate
+calling _cross_validate
+calling _notify_trait
+calling notify_change
+calling _notify_observers
+calling validate
+calling __exit__
+calling unset
+calling __exit__
+calling deactivate
+calling remove_builtin
+calling store_output
+calling validate
+calling _validate_bounds
+calling trigger
+calling _restore_input
+calling success
+calling info
+calling isEnabledFor
+calling _acquireLock
+calling disable
+calling getEffectiveLevel
+calling _releaseLock
+calling _log
+calling findCaller
+calling &lt;lambda&gt;
+calling _is_internal_frame
+calling normcase
+calling makeRecord
+calling __init__
+calling __instancecheck__
+calling getLevelName
+calling basename
+calling _get_sep
+calling splitext
+calling _splitext
+calling current_thread
+calling name
+calling current_process
+calling name
+calling handle
+calling filter
+calling callHandlers
+calling read_payload
+calling clear_payload
+calling set
+calling validate
+calling validate_elements
+calling validate_elements
+calling flush
+calling is_alive
+calling is_set
+calling _wait_for_tstate_lock
+calling ident
+calling schedule
+calling _event_pipe
+calling send
+calling __init__
+calling __init__
+calling wait
+calling __enter__
+calling wait
+calling _is_owned
+calling _release_save
+calling _acquire_restore
+calling __exit__
+calling json_clean
+calling finish_metadata
+calling send
+calling msg
+calling msg_header
+calling msg_id
+calling msg_header
+calling utcnow
+calling extract_header
+calling serialize
+calling _clean_thread_parent_frames
+calling enumerate
+calling &lt;setcomp&gt;
+calling json_packer
+calling dumps
+calling __init__
+calling encode
+calling iterencode
+calling json_default
+calling _ensure_tzinfo
+calling utcoffset
+calling sign
+calling copy
+calling update
+calling hexdigest
+calling _current
+calling &lt;listcomp&gt;
+calling send_multipart
+calling put
+calling _put
+calling notify
+calling on_send
+calling _check_closed
+calling _add_io_state
+calling __or__
+calling _get_value
+calling __call__
+calling __new__
+calling _update_handler
+calling __getattr__
+calling _handle_fromlist
+calling _get_attr_opt
+calling __and__
+calling add_callback
+calling call_soon
+calling _check_closed
+calling _call_soon
+calling __init__
+calling get_debug
+calling debug
+calling _abort_queues
+calling flush
+calling update_flag
+calling sending
+calling empty
+calling _qsize
+calling register
+calling poll
+calling _handle_send
+calling get
+calling _get
+calling send_multipart
+calling _run_callback
+calling &lt;lambda&gt;
+calling __instancecheck__
+calling __subclasscheck__
+calling __subclasscheck__
+calling _rebuild_io_state
+calling receiving
+calling trait_defaults
+calling has_trait
+calling _get_trait_default_generator
+calling default
+calling validate
+calling schedule_dispatch
+calling put_nowait
+calling _consume_expired
+calling full
+calling maxsize
+calling __put_internal
+calling clear
+calling _put
+calling post_handler_hook
+calling signal
+calling _enum_to_int
+calling _int_to_enum
+calling _publish_status
+calling get_parent
+calling _topic
+calling send_multipart
+calling send_multipart
+calling process_one
+calling _warn_unawaited_coroutine
+calling __init__
+calling _showwarnmsg
+calling _showwarnmsg_impl
+calling _formatwarnmsg
+calling _formatwarnmsg_impl
+calling getline
+calling getlines
+calling get_object_traceback
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>/home/dboy/open_source/play_torch.fx/.venv/lib/python3.11/site-packages/ipykernel/kernelbase.py:545: RuntimeWarning: coroutine 'Kernel.process_one' was never awaited
+  await self.process_one()
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2d392b6e-af9e-4121-aeb9-d858226e6cad">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="What's-Next">What's Next<a class="anchor-link" href="#What's-Next">¶</a></h2><ul>
+<li>Symbolic Tracing for <code>TorchDynamo</code>: <code>TorchInductor</code><ul>
+<li>How to handle dynamic control flow?</li>
+<li>Graph Break<ul>
+<li>spliting the computational graph into multiple subgraphs</li>
+<li>continuation functions</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>How tracker works</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=02c724f4-9e3f-4248-a1fb-b06800ba14f5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="References">References<a class="anchor-link" href="#References">¶</a></h2><ul>
+<li>TorchDynamo<ul>
+<li><a href="https://www.youtube.com/watch?v=egZB5Uxki0I&amp;ab_channel=EdwardZ.Yang%27sPyTorchandPL">https://www.youtube.com/watch?v=egZB5Uxki0I&amp;ab_channel=EdwardZ.Yang%27sPyTorchandPL</a></li>
+<li><a href="https://www.youtube.com/watch?v=5FNHwPIyHr8&amp;ab_channel=PyTorch">https://www.youtube.com/watch?v=5FNHwPIyHr8&amp;ab_channel=PyTorch</a></li>
+<li><a href="https://dev-discuss.pytorch.org/t/a-minimal-working-example-of-standalone-usage-for-dynamo-eval-frame/1525">https://dev-discuss.pytorch.org/t/a-minimal-working-example-of-standalone-usage-for-dynamo-eval-frame/1525</a></li>
+</ul>
+</li>
+<li><code>torch.fx</code><ul>
+<li><a href="https://www.youtube.com/watch?v=TexdGMdQya4&amp;ab_channel=Unify">https://www.youtube.com/watch?v=TexdGMdQya4&amp;ab_channel=Unify</a></li>
+<li><a href="https://github.com/pytorch/examples/tree/main/fx">https://github.com/pytorch/examples/tree/main/fx</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 </div>
