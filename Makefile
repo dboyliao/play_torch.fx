@@ -15,7 +15,10 @@ slides:
 update-slides: gh-page-worktree slides
 	@cp notebooks/intro_torchdynamo.slides.html worktree/gh-pages/index.html
 	@cp -r notebooks/img worktree/gh-pages
+
+COMMIT_MESSAGE?='update gh-page slides'
+push-slides:
 	@cd worktree/gh-pages; \
 	git add -A; \
-	git commit -m 'update gh-page slides'; \
+	git commit -m $(COMMIT_MESSAGE); \
 	git push origin gh-pages;
