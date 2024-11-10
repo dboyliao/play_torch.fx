@@ -7574,17 +7574,17 @@ main {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>CPU times: user 6 μs, sys: 1e+03 ns, total: 7 μs
-Wall time: 13.8 μs
+<pre>CPU times: user 7 μs, sys: 1e+03 ns, total: 8 μs
+Wall time: 14.5 μs
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>tensor([[-0.1931, -1.4144,  2.1695,  0.5346],
-        [ 1.0813, -0.5102,  1.3452, -2.1360],
-        [-0.1093, -0.9701,  2.5846,  0.0914]])</pre>
+<pre>tensor([[ 1.1368, -2.5452,  0.3648, -0.1320],
+        [ 0.2835,  0.3718, -2.8085, -1.2019],
+        [-0.0500,  0.8236,  1.4256, -1.1588]])</pre>
 </div>
 </div>
 </div>
@@ -7611,17 +7611,17 @@ Wall time: 13.8 μs
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>CPU times: user 6 μs, sys: 1 μs, total: 7 μs
-Wall time: 13.4 μs
+<pre>CPU times: user 7 μs, sys: 1 μs, total: 8 μs
+Wall time: 14.3 μs
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>tensor([[-0.1931, -1.4144,  2.1695,  0.5346],
-        [ 1.0813, -0.5102,  1.3452, -2.1360],
-        [-0.1093, -0.9701,  2.5846,  0.0914]])</pre>
+<pre>tensor([[ 1.1368, -2.5452,  0.3648, -0.1320],
+        [ 0.2835,  0.3718, -2.8085, -1.2019],
+        [-0.0500,  0.8236,  1.4256, -1.1588]])</pre>
 </div>
 </div>
 </div>
@@ -7648,17 +7648,17 @@ Wall time: 13.4 μs
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>CPU times: user 7 μs, sys: 0 ns, total: 7 μs
-Wall time: 15.3 μs
+<pre>CPU times: user 7 μs, sys: 1 μs, total: 8 μs
+Wall time: 15 μs
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>tensor([[-0.1931, -1.4144,  2.1695,  0.5346],
-        [ 1.0813, -0.5102,  1.3452, -2.1360],
-        [-0.1093, -0.9701,  2.5846,  0.0914]])</pre>
+<pre>tensor([[ 1.1368, -2.5452,  0.3648, -0.1320],
+        [ 0.2835,  0.3718, -2.8085, -1.2019],
+        [-0.0500,  0.8236,  1.4256, -1.1588]])</pre>
 </div>
 </div>
 </div>
@@ -8286,6 +8286,211 @@ output         output                                    output                 
 </li>
 </ul>
 <p><img alt="utensor-node-fusion" src="https://github.com/uTensor/utensor_cgen/blob/eccd6859028d0b6a350dced25ea72ff02faaf9ad/doc/source/_images/conv_pool_fuse.png?raw=true"/></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e08242fd-f46a-44b4-8c92-4b72e24c7f4a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Comparison-with-torch.fx">Comparison with <code>torch.fx</code><a class="anchor-link" href="#Comparison-with-torch.fx">¶</a></h2>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3db06b5a-50e5-4e95-8741-e53f5f5b974d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li><code>torch.fx.symbolic_trace</code><ul>
+<li>it parse the <code>nn.Module</code> and convert it into a <code>GraphModule</code>.</li>
+<li><code>GraphModule.graph</code>: the graph IR of the module.</li>
+</ul>
+</li>
+<li><code>torch.compile</code> + custom backend<ul>
+<li>it also pase the <code>nn.Module</code> into <code>GraphModule</code>, with the support of <strong>Graph Break</strong></li>
+<li>Do JIT-compilation on the resulting <code>GraphModule</code></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=434c6841-fe3b-4bf4-a299-8ee3dbed057d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="What-is-GrapBreak?">What is <code>GrapBreak</code>?<a class="anchor-link" href="#What-is-GrapBreak?">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e0609d14-10c2-4f07-958a-650350c44b94">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li>It's hard for a compiler to keep track of the execution of a function frame in a dynamic language like Python.<ul>
+<li>ex: data-dependent control flow, try-catch</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b2d266fb-108a-4933-ade7-d852490119c3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li><code>torch.fx.symbolic_trace</code> takes a all-or-nothing approach when it find codes it can not keep track of</li>
+</ul>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d56ae51a-632b-4178-9ec0-411d251c2462">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li><code>TorchDynamo</code> introduce graph breaks to resolve the problem<ul>
+<li>It breaks a computational graph into many subgraphs</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=85043419-8f28-4a6e-b6cd-e46ca6294ba8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># an example with dynamic control flow</span>
+<span class="k">class</span> <span class="nc">DynamicModule</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+        <span class="k">return</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0543f4b8-d5a6-4df2-9b72-7912f6816954">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">_</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">fx</span><span class="o">.</span><span class="n">symbolic_trace</span><span class="p">(</span><span class="n">DynamicModule</span><span class="p">())</span>
+<span class="k">except</span> <span class="n">TraceError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Tracing Error!!"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Tracing Error!!
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ed3834e7-8392-4e9a-96d0-9928c2bbcbe8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">graphs</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">def</span> <span class="nf">collect_graphs</span><span class="p">(</span><span class="n">gm</span><span class="p">,</span> <span class="n">samples</span><span class="p">):</span>
+    <span class="n">graphs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gm</span><span class="o">.</span><span class="n">graph</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">gm</span><span class="o">.</span><span class="n">forward</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">DynamicModule</span><span class="p">(),</span> <span class="n">backend</span><span class="o">=</span><span class="n">collect_graphs</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9fb852fc-eb2f-4221-8240-988f2ba475cd">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">graph</span> <span class="ow">in</span> <span class="n">graphs</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">graph</span><span class="o">.</span><span class="n">python_code</span><span class="p">(</span><span class="s2">"self"</span><span class="p">)</span><span class="o">.</span><span class="n">src</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"=="</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>def forward(self, L_x_ : torch.Tensor):
+    l_x_ = L_x_
+    sum_1 = l_x_.sum();  l_x_ = None
+    gt = sum_1 &gt; 0;  sum_1 = None
+    return (gt,)
+====================
+def forward(self, L_x_ : torch.Tensor):
+    l_x_ = L_x_
+    mul = 3 * l_x_;  l_x_ = None
+    return (mul,)
+====================
+def forward(self, L_x_ : torch.Tensor):
+    l_x_ = L_x_
+    mul = l_x_ * l_x_;  l_x_ = None
+    return (mul,)
+====================
+</pre>
+</div>
 </div>
 </div>
 </div>

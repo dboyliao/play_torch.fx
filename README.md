@@ -6,6 +6,8 @@ $ cmake ..
 $ make
 ```
 
+[slides](https://dboyliao.github.io/play_torch.fx/#/)
+
 # References
 - https://peps.python.org/pep-0523/
     - https://github.com/python/cpython/issues/80067
